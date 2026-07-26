@@ -1,0 +1,81 @@
+/* Pokémon GO Friend Tracker standalone — LinaHub matching skin */
+:root{
+  color-scheme:dark;
+  --bg:#080711;
+  --bg2:#111027;
+  --card:rgba(23,19,45,.92);
+  --ink:#f8f3ff;
+  --muted:#b9accd;
+  --purple:#9d65ff;
+  --purple2:#d052dd;
+  --blue:#4f8cff;
+  --pink:#ff5ca8;
+  --gold:#f2bd57;
+  --aqua:#45d7e8;
+  --line:rgba(174,132,255,.28);
+  --shadow:0 18px 55px rgba(0,0,0,.34),0 0 28px rgba(113,63,190,.09);
+}
+html,body{min-height:100%;background:#080711!important}
+body{
+  margin:0!important;color:var(--ink)!important;
+  background:
+    radial-gradient(circle at 8% -5%,rgba(117,69,214,.36),transparent 27rem),
+    radial-gradient(circle at 100% 15%,rgba(35,112,210,.22),transparent 24rem),
+    radial-gradient(circle at 48% 95%,rgba(208,82,221,.13),transparent 28rem),
+    linear-gradient(160deg,var(--bg),var(--bg2) 57%,#090913)!important;
+  background-attachment:fixed!important;
+}
+body:before{z-index:0!important}.pokemon-standalone,#toast{position:relative;z-index:1}
+.pokemon-standalone{width:100%;max-width:760px!important;margin:0 auto!important;padding:18px 16px 48px!important}
+.page-head{display:flex!important;align-items:center!important;min-height:auto!important;margin:4px 0 16px!important;padding:0!important}
+.page-head h1{margin:0 0 5px!important;font-size:clamp(2rem,7vw,2.65rem)!important;line-height:1!important;letter-spacing:-.035em!important;color:#fff!important}
+.page-head p{margin:0!important;font-size:.92rem!important;color:#b9accd!important}
+
+.card,.pokemon-hero,.poke-filters,.poke-friend-list>.card{
+  color:var(--ink)!important;background:linear-gradient(145deg,rgba(29,24,56,.96),rgba(15,14,32,.94))!important;
+  border:1px solid var(--line)!important;box-shadow:var(--shadow)!important;backdrop-filter:blur(16px)!important;
+}
+.card{border-radius:24px!important;padding:18px!important;margin-bottom:14px!important}.card:after{display:none!important}
+
+/* Beta controls styled as a subtle LinaHub utility drawer rather than a large pale block. */
+.beta-tools{display:block!important;margin:0 0 14px!important;padding:0!important;overflow:hidden!important;border-radius:20px!important}
+.beta-tools>div:first-child{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;padding:13px 15px 8px!important}
+.beta-tools>div:first-child:before{content:"🧪";font-size:1.15rem}.beta-tools>div:first-child strong{margin-right:auto!important;color:#f3eaff!important}
+.beta-tools small{display:none!important}.beta-tool-buttons{display:grid!important;grid-template-columns:1fr 1fr auto!important;gap:7px!important;padding:0 10px 10px!important}
+.beta-tool-buttons .secondary,.beta-import{min-height:40px!important;padding:8px 10px!important;border-radius:13px!important;background:rgba(157,101,255,.12)!important;color:#dbcaff!important;border:1px solid var(--line)!important;font-size:.78rem!important;font-weight:800!important}
+.beta-tool-buttons .danger{width:42px!important;min-height:40px!important;border-radius:13px!important;border:1px solid rgba(255,92,120,.28)!important;background:rgba(255,92,120,.1)!important;color:#ff9eb2!important;font-size:0!important}
+.beta-tool-buttons .danger:after{content:"↺";font-size:1.05rem}.beta-import{position:relative;display:flex!important;align-items:center;justify-content:center;cursor:pointer}.beta-import input{position:absolute;inset:0;opacity:0;cursor:pointer}
+
+.pokemon-hero{padding:0!important;margin:0 0 12px!important;background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important}
+.poke-metrics{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:9px!important}
+.metric-card{min-width:0!important;min-height:94px!important;padding:14px 10px!important;border-radius:20px!important;text-align:center!important;display:flex!important;flex-direction:column!important;justify-content:center!important;gap:5px!important;background:linear-gradient(145deg,rgba(34,27,65,.96),rgba(17,15,37,.96))!important;border:1px solid var(--line)!important;box-shadow:0 12px 28px rgba(0,0,0,.22)!important}
+.metric-card:nth-child(1){border-color:rgba(157,101,255,.42)!important}.metric-card:nth-child(2){border-color:rgba(79,140,255,.38)!important}.metric-card:nth-child(3){border-color:rgba(255,92,168,.34)!important}.metric-card:nth-child(4){border-color:rgba(69,215,232,.34)!important}
+.metric-card span{font-size:.68rem!important;line-height:1.15!important;color:#aa9dbf!important}.metric-card strong{font-size:1.65rem!important;line-height:1!important;color:#fff!important}
+
+.poke-tabs,.poke-tabs-five{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:7px!important;margin:0 0 12px!important;padding:6px!important;border-radius:18px!important;background:rgba(10,9,23,.72)!important;border:1px solid var(--line)!important}
+.poke-tabs button{min-width:0!important;min-height:44px!important;padding:7px 5px!important;border:0!important;border-radius:13px!important;background:transparent!important;color:#9f93b7!important;font-size:.72rem!important;font-weight:800!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.poke-tabs button.active{color:#fff!important;background:linear-gradient(110deg,rgba(123,69,223,.88),rgba(157,84,239,.78))!important;box-shadow:0 7px 18px rgba(100,58,185,.28)!important}
+
+.poke-filters{padding:12px!important;margin-bottom:12px!important;border-radius:22px!important}
+.poke-filters .field,#pokeSearch,#pokeFriendshipFilter,#pokeVivillonFilter,#pokeInactivityFilter{width:100%!important;min-height:45px!important;border-radius:15px!important;padding:10px 13px!important;background:rgba(8,8,20,.72)!important;color:#f8f3ff!important;border:1px solid var(--line)!important;box-shadow:none!important}
+.poke-filters .field::placeholder,#pokeSearch::placeholder{color:#8f82a4!important}.poke-results{margin:10px 2px 0!important;color:#a99bbc!important;font-size:.78rem!important}
+.poke-filter-drawer{margin-top:8px!important;border:1px solid var(--line)!important;border-radius:15px!important;background:rgba(8,8,20,.42)!important;overflow:hidden!important}
+.poke-filter-drawer>summary{min-height:42px!important;padding:9px 12px!important;color:#d9c9f5!important}
+.poke-filter-drawer-fields{gap:8px!important;padding:0 8px 8px!important}
+
+.poke-friend-list{display:grid!important;gap:10px!important}.poke-friend-list>.card{margin:0!important;padding:16px!important;border-radius:21px!important;color:#c7b9da!important}.poke-friend-list>.card p{margin:0!important;color:#a99bbc!important}
+.poke-friend-card{background:linear-gradient(135deg,rgba(28,23,54,.94),rgba(14,13,31,.94))!important;border:1px solid var(--line)!important;border-radius:21px!important;box-shadow:0 10px 25px rgba(0,0,0,.22)!important;color:var(--ink)!important}
+.poke-friend-card *{color:inherit}.poke-friend-card small,.poke-friend-card p{color:#aa9dbf!important}
+
+.form-grid .field,.two-col .field,textarea.field{background:rgba(8,8,20,.72)!important;color:#fff!important;border:1px solid var(--line)!important}.primary{color:#fff!important}.secondary{background:rgba(157,101,255,.12)!important;color:#dbcaff!important;border:1px solid var(--line)!important}
+.bottom,.bottom-nav{display:none!important}
+#toast{position:fixed!important;left:50%!important;bottom:22px!important;transform:translateX(-50%) translateY(20px)!important;background:#3b2865!important;color:#fff!important;border:1px solid var(--line)!important;box-shadow:0 12px 30px rgba(0,0,0,.35)!important}#toast.show{transform:translateX(-50%) translateY(0)!important}
+
+@media(max-width:650px){
+  .pokemon-standalone{padding:12px 10px 34px!important}.page-head{margin-top:3px!important;margin-bottom:13px!important}.page-head h1{font-size:2rem!important}.page-head p{font-size:.78rem!important}
+  .poke-metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}.metric-card{min-height:76px!important;padding:10px 7px!important;border-radius:17px!important}.metric-card strong{font-size:1.35rem!important}.metric-card span{font-size:.63rem!important}
+  .poke-tabs,.poke-tabs-five{grid-template-columns:repeat(2,minmax(0,1fr))!important}.poke-tabs button:nth-child(n+3){display:none!important}
+  .beta-tools>div:first-child{padding:11px 12px 7px!important}.beta-tool-buttons{grid-template-columns:1fr 1fr 40px!important;padding:0 8px 8px!important}
+  .card{border-radius:20px!important;padding:12px!important}
+}
+@media(max-width:370px){.beta-tool-buttons .secondary,.beta-import{font-size:.69rem!important}.page-head h1{font-size:1.8rem!important}}
