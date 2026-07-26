@@ -15,3 +15,6 @@ DATA NOTES
 - Use Import backup to restore a previously exported JSON backup.
 
 For the most reliable phone testing, testers can use any simple local-file web app viewer or open the extracted index.html in a browser that supports local HTML files. No Netlify or shared hosting is required.
+
+
+Version 1.1: Restyled to match the original LinaHub Pokémon GO tab.

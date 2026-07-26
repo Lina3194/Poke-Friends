@@ -1,0 +1,18 @@
+POKÉMON GO TRACKER BETA v1.2
+
+IMPORTANT:
+Upload the FILES AND FOLDERS INSIDE this folder directly to the ROOT of your separate GitHub repository.
+Do not upload the containing folder itself and do not upload only index.html/app.js.
+
+At the root of GitHub you should see:
+index.html
+app.js
+core/
+pages/
+styles/
+icons/
+
+After committing, hard-refresh the page (Ctrl+F5 on computer) or close and reopen the installed app.
+You will see a small v1.2 badge beside Beta tools when the correct version has loaded.
+
+Existing tester data is preserved because the storage key remains unchanged.

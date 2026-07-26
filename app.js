@@ -1,6 +1,6 @@
 function head(title,subtitle){return `<header class="page-head"><div><h1>${title}</h1><p>${subtitle}</p></div></header>`;}
 function shell(content){return `<main class="shell pokemon-standalone">${content}</main>`;}
-function render(){document.body.dataset.route="pokemon";document.querySelector("#app").innerHTML=PokemonPage();bindPokemon();bindBetaTools();}
+function render(){document.body.classList.add("dark");document.body.dataset.colorTheme="floral";document.body.dataset.route="pokemon";document.querySelector("#app").innerHTML=PokemonPage();bindPokemon();bindBetaTools();}
 function bindBetaTools(){
   document.querySelector("#exportBetaData")?.addEventListener("click",()=>{
     const blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),pokemonFriends:data.pokemonFriends},null,2)],{type:"application/json"});
@@ -14,6 +14,6 @@ function bindBetaTools(){
 const originalPokemonPage=PokemonPage;
 PokemonPage=function(){
   const html=originalPokemonPage();
-  return html.replace('<section class="pokemon-hero">',`<section class="beta-tools card"><div><strong>Beta tools</strong><small>Your data stays only on this device.</small></div><div class="beta-tool-buttons"><button class="secondary" id="exportBetaData">Export backup</button><label class="secondary beta-import">Import backup<input id="importBetaData" type="file" accept="application/json,.json"></label><button class="mini danger" id="resetBetaData">Reset</button></div></section><section class="pokemon-hero">`);
+  return html.replace('<section class="pokemon-hero">',`<section class="beta-tools card"><div><strong>Beta tools <em class="beta-version">v1.2</em></strong><small>Your data stays only on this device.</small></div><div class="beta-tool-buttons"><button class="secondary" id="exportBetaData">Export backup</button><label class="secondary beta-import">Import backup<input id="importBetaData" type="file" accept="application/json,.json"></label><button class="mini danger" id="resetBetaData">Reset</button></div></section><section class="pokemon-hero">`);
 };
 render();
